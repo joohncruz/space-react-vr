@@ -30,6 +30,11 @@ export default class EarthMoonVR extends React.Component {
       '../static_assets/space_front.png'
     ];
 
+    this.classRoom = '../static_assets/room1.jpg'
+
+    this.classRoom2 = '../static_assets/room2.jpg'
+    
+
     this.rotate = this.rotate.bind(this);
 
     this.styles = StyleSheet.create({
@@ -63,11 +68,11 @@ export default class EarthMoonVR extends React.Component {
 	  });
     this.frameHandle = requestAnimationFrame(this.rotate);
   }
-  
+
   render() {
     return (
       <View>
-        <Pano source={ { uri: this.spaceSkymap } }/>
+        <Pano source={ { uri: this.classRoom2 } }/>
 
         <AmbientLight intensity={ 2.6 }  />
 
