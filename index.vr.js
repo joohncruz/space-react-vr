@@ -22,12 +22,12 @@ export default class EarthMoonVR extends React.Component {
     this.lastUpdate = Date.now();
 
     this.spaceSkymap = [
-      '../static_assets/space_right1.png',
-      '../static_assets/space_left2.png',
-      '../static_assets/space_top3.png',
-      '../static_assets/space_bottom4.png',
-      '../static_assets/space_front5.png',
-      '../static_assets/space_back6.png'
+      '../static_assets/space_right.png',
+      '../static_assets/space_left.png',
+      '../static_assets/space_up.png',
+      '../static_assets/space_down.png',
+      '../static_assets/space_back.png',
+      '../static_assets/space_front.png'
     ];
 
     this.rotate = this.rotate.bind(this);
@@ -42,24 +42,28 @@ export default class EarthMoonVR extends React.Component {
       }
     })
   }
-  comonentDidMount() {
-    this.rotate()
+  componentDidMount() {
+    this.rotate();
   }
-  componentWilUnmont() {
-    if(this.frameHandle) {
-      cancelAnimationFrame(this.frameHandle)
+
+  componentWillUnmount() {
+    if (this.frameHandle) {
+      cancelAnimationFrame(this.frameHandle);
       this.frameHandle = null;
     }
   }
+
   rotate() {
-    const now = Date.now()
+    const now = Date.now();
     const delta = now - this.lastUpdate;
     this.lastUpdate = now;
+
     this.setState({
-      rotation: this.state.rotation + delta / 150
-    })
+		  rotation: this.state.rotation + delta / 150
+	  });
     this.frameHandle = requestAnimationFrame(this.rotate);
   }
+  
   render() {
     return (
       <View>
