@@ -31,9 +31,8 @@ export default class EarthMoonVR extends React.Component {
     ];
 
     this.classRoom = '../static_assets/room1.jpg'
-
     this.classRoom2 = '../static_assets/room2.jpg'
-    
+    this.classRoom3 = '../static_assets/room3.jpg'        
 
     this.rotate = this.rotate.bind(this);
 
@@ -72,7 +71,7 @@ export default class EarthMoonVR extends React.Component {
   render() {
     return (
       <View>
-        <Pano source={ { uri: this.classRoom2 } }/>
+        <Pano source={ { uri: this.classRoom3 } }/>
 
         <AmbientLight intensity={ 2.6 }  />
 
