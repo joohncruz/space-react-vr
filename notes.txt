@@ -1,1 +1,2 @@
 https://www.pluralsight.com/guides/front-end-javascript/getting-started-with-react-vr
+https://github.com/pluralsight/guides/blob/master/published/front-end-javascript/getting-started-with-react-vr/article.md
